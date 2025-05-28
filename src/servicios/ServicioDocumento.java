@@ -23,7 +23,7 @@ public class ServicioDocumento {
                 while (linea != null) {
                     var textos = linea.split(";");
                     // Suponiendo el orden: Apellido1;Apellido2;Nombre;Documento
-                    Documento documento = new Documento(textos[2], textos[0], textos[1], textos[3]);
+                    Documento documento = new Documento(textos[0], textos[1], textos[2], textos[3]);
                     documentos.add(documento);
                     linea = br.readLine();
                 }
@@ -35,7 +35,7 @@ public class ServicioDocumento {
     }
 
     public static void mostrar(JTable tbl) {
-        String[] encabezados = { "#", "Nombre", "Primer Apellido", "Segundo Apellido", "Documento" };
+        String[] encabezados = { "#", "Segundo Apellido", "Primer Apellido", "Nombre", "Documento" };
         String[][] datos = new String[documentos.size()][encabezados.length];
 
         for (int i = 0; i < documentos.size(); i++) {
