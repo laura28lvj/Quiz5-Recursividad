@@ -78,7 +78,7 @@ public class FrmOrdenamiento extends JFrame {
 
     
         cmbCriterio.setModel(new DefaultComboBoxModel<>(
-                new String[]{"Nombre Completo", "Nombre"}));
+                new String[]{"Nombre Completo", "Nombre","Primer Apellido"}));
         tbOrdenamiento.add(cmbCriterio);
 
         tbOrdenamiento.add(txtTiempo);
